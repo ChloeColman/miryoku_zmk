@@ -9,10 +9,16 @@
     combos {
         compatible = "zmk,combos";
         combo_base_layer {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <24 35>; // LSHIFT + RSHIFT
             bindings = <&to U_BASE>;
-            layers = <U_TAP U_EXTRA>; // only active on TAP and EXTRA layers
+            // layers = <U_TAP U_EXTRA>; // uncomment to restrict to TAP/EXTRA only
         };
+    };
+};
+
+&glidepoint_listener {
+    scroller {
+        layers = <U_NUM U_SYM U_FUN>; // right thumb layers (7, 8, 9)
     };
 };
